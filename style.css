@@ -1,0 +1,407 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+html{
+    scroll-behavior: smooth;
+}
+.scroll{
+    scroll-margin: 70px;
+}
+   
+.parallax{ 
+    position:relative;
+    background-image:url('images/vegetables-790022_1920.jpg');
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    height:max-content;
+    z-index:-2;
+    margin-top: 60px;
+}
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    background-color:rgba(0,0, 0,.3);
+    z-index:-1;
+}
+.parallax .page-title{
+    color:white;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    font-family:fantasy;
+    letter-spacing:1.3rem;
+    text-transform: uppercase;
+    font-size:4.5rem; 
+    line-height:150px;
+
+}
+.page-title span{
+    font-size:7rem;
+}
+.vh{
+    height:45vh;
+}
+nav{
+    background-color:rgb(41, 69, 77);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:fixed;
+    width:100%;
+    top:0px;
+}
+nav .menu ul{
+    display:flex; 
+    flex-direction:row;
+    list-style:none;
+    height:60px;
+    align-items:center;
+}
+
+nav .menu ul li a{
+    display:inline-block;
+    width:100px;
+    text-decoration:none;
+    text-align:center;
+    color:white;
+    padding:20px 0;
+}
+nav .menu ul li a:hover{
+    background-color:rgb(0, 121, 50);
+    box-shadow:0px 4px 1px 0px rgb(0, 121, 50),
+               0px -5px 1px 0px rgb(0, 121, 50);
+    font-size:1.2rem;
+               
+}
+.search-box{
+    background-color:white;
+    padding:10px;
+    border-radius:20px;
+    margin-left:10px;
+}
+.search-box:hover{
+    box-shadow:2px 2px 5px 4px rgba(54, 252, 5, .4),
+              -1px -1px 5px 4px rgba(93, 248, 4, .4);
+}
+.search-box form input{
+    border:none;
+    width:220px;
+    outline:none;
+}
+.search-box form button{
+    border:none;
+    background-color:white;
+    
+}
+.container{
+    width:85%;
+    margin:auto;
+    
+   
+}
+.categories{
+    width:100%;
+    padding-top: 80px;
+    padding-bottom:80px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    background-color:white;
+}
+.categories .item{
+    width:20%;
+    height:300px;
+    padding:10px;
+    border:2px solid rgb(84, 157, 175);
+    border-end-start-radius: 40px;
+    border-end-end-radius: 40px;
+}
+.categories .item:hover{
+    box-shadow:1px 1px 3px 2px rgb(84, 157, 175),
+    -1px -1px 3px 2px rgb(84, 157, 175);
+}
+.categories .item img{
+    width:100%;
+    height:85%;
+    border-end-start-radius: 40px;
+    border-end-end-radius: 40px;
+}
+.categories .item h3{
+    color:rgb(4, 51, 63);   
+    text-align:center;
+    margin-top:15px;
+}
+
+.deals .parallax{
+    margin-bottom:20px;
+}
+.parallax .deals-title{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+    font-family: sans-serif;
+    text-transform:uppercase;
+    letter-spacing:15px;
+    font-size:2rem;
+}
+.h{
+    height:25vh;
+}
+.deals{
+    padding-bottom:80px;
+}
+.deals-items{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+}
+.deals-items .item{
+    width:27%;
+    
+    padding:60px;
+    text-align:center;
+    background:linear-gradient(120deg,#16817a 20%,#cee397 50%, #16817a 80%);
+}
+.deals-items .item p{
+    color:white;
+    font-family:sans-serif;
+    font-size:1.5rem;
+    line-height:30px;
+}
+.deals-items .item span{
+    display:inline-block;
+    border:2px solid white;
+    padding:7px;
+    border-radius:20px;
+    color:white;
+    width:60%;
+    font-family: sans-serif;
+    text-transform:capitalize;
+    margin-top:20px;
+}
+.deals-items .item span:hover{
+    box-shadow:0px 0px 5px 3px white inset; 
+}
+.vegetables{
+    padding-bottom:40px;
+}
+.vegetables .parallax{
+    margin-bottom:20px;
+}
+.parallax .vegetables-title{
+    position:absolute;
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+    font-family: sans-serif;
+    text-transform:uppercase;
+    letter-spacing:15px;
+    font-size:2rem;
+}
+.vegetables-items{  
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    
+    
+}
+.vegetables-items .item{
+    width:26%;
+    border:2px solid rgb(84, 157, 175);
+    border-radius:0 0 50px 50px;
+    padding:10px 10px 20px 10px;
+    margin-bottom:35px;
+    
+}
+.vegetables-items .item:hover{
+    box-shadow:1px 1px 3px 2px rgb(84, 157, 175),
+    -1px -1px 3px 2px rgb(84, 157, 175);
+}
+.vegetables-items .item img{
+    width:100%;
+    height:180px;
+}
+.vegetables-items .item .description{
+    text-align:center;
+    margin-top:10px;
+    line-height:40px;
+    font-family:sans-serif;
+}
+.vegetables-items .item .description .buy-now{
+    box-shadow: none;
+    background-color:rgb(4, 51, 63);
+    color:white;
+    padding:5px;
+    border-radius:50px;
+    margin-top:5px;
+    width:100px;
+    
+}
+.vegetables-items .item .description .buy-now:hover{
+    box-shadow:0px 0px 8px 5px rgb(93, 202, 230) inset;
+}
+
+.fruits{
+    padding-bottom:40px;
+}
+.fruits .parallax{
+    margin-bottom:20px;
+}
+.parallax .fruits-title{
+    position:absolute;
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+    font-family: sans-serif;
+    text-transform:uppercase;
+    letter-spacing:15px;
+    font-size:2rem;
+}
+.fruits-items{  
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    
+    
+}
+.fruits-items .item{
+    width:26%;
+    border:2px solid rgb(84, 157, 175);
+    border-radius:0 0 50px 50px;
+    padding:10px 10px 20px 10px;
+    margin-bottom:35px;
+    
+}
+.fruits-items .item:hover{
+    box-shadow:1px 1px 3px 2px rgb(84, 157, 175),
+    -1px -1px 3px 2px rgb(84, 157, 175);
+}
+.fruits-items .item img{
+    width:100%;
+    height:180px;
+}
+.fruits-items .item .description{
+    text-align:center;
+    margin-top:10px;
+    line-height:40px;
+    font-family:sans-serif;
+}
+.fruits-items .item .description .buy-now{
+    box-shadow: none;
+    background-color:rgb(4, 51, 63);
+    color:white;
+    padding:5px;
+    border-radius:50px;
+    margin-top:5px;
+    width:100px;
+    
+}
+.fruits-items .item .description .buy-now:hover{
+    box-shadow:0px 0px 8px 5px rgb(93, 202, 230) inset;
+}
+.meat-sea-food{
+    padding-bottom:40px;
+}
+.meat-sea-food .parallax{
+    margin-bottom:20px;
+}
+.parallax .meat-sea-food-title{
+    position:absolute;
+    top:30%;
+    left:17%;
+    color:white;
+    font-family: sans-serif;
+    text-transform:uppercase;
+    letter-spacing:15px;
+    font-size:1.8rem;
+}
+.meat-sea-food-items{  
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    
+    
+}
+.meat-sea-food-items .item{
+    width:26%;
+    border:2px solid rgb(84, 157, 175);
+    border-radius:0 0 50px 50px;
+    padding:10px 10px 20px 10px;
+    margin-bottom:35px;
+    
+}
+.meat-sea-food-items .item:hover{
+    box-shadow:1px 1px 3px 2px rgb(84, 157, 175),
+    -1px -1px 3px 2px rgb(84, 157, 175);
+}
+.meat-sea-food-items .item img{
+    width:100%;
+    height:180px;
+}
+.meat-sea-food-items .item .description{
+    text-align:center;
+    margin-top:10px;
+    line-height:40px;
+    font-family:sans-serif;
+}
+.meat-sea-food-items .item .description .buy-now{
+    box-shadow: none;
+    background-color:rgb(4, 51, 63);
+    color:white;
+    padding:5px;
+    border-radius:50px;
+    margin-top:5px;
+    width:100px;
+    
+}
+.meat-sea-food-items .item .description .buy-now:hover{
+    box-shadow:0px 0px 8px 5px rgb(93, 202, 230) inset;
+}
+
+.parallax1{
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    background:url('images/mediterranean-cuisine-2378758_1920.jpg');
+    background-attachment:fixed;
+    background-position:center;
+    background-size:cover;
+    height:40vh;
+    text-align:center;
+    position:relative;
+    z-index:-2;
+}
+.location h3, .careers h3, .quick-links h3{
+    color:white;
+    font-family:sans-serif;
+    font-size:1.5rem;
+    margin-bottom:20px;
+}
+.location ul, .careers ul, .quick-links ul{
+    color:white;
+    list-style:none;
+    line-height:40px;
+    font-size:1.1rem;
+}
+footer .copyright{
+    text-align:center;
+    padding:5px 0;
+    font-size:1.1rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing:3px;
+}
